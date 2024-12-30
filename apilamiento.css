@@ -24,9 +24,9 @@ body {
 .layer-1 {
     position: absolute;
     z-index: 1;
-    height: 500px;
+    height: 480px;
     width: 80px;
-    background-color: white;
+    background-color: lightgray;
     bottom: 0;
     right: 65px;
     border-top-right-radius: 20px;
@@ -36,9 +36,9 @@ body {
 .layer-2 {
     position: absolute;
     z-index: 2;
-    height: 500px;
+    height: 480px;
     width: 80px;
-    background-color: white;
+    background-color:lightgray;
     bottom: 0;
     left: 65px;
     border-top-right-radius: 20px;
@@ -63,9 +63,9 @@ body {
 .layer-4 {
     position: absolute;
     z-index: 4;
-    height: 350px;
+    height: 360px;
     width: 80px;
-    background-color: white;
+    background-color:lightgray;
     bottom: 0;
     left: 100px;
     border-top-right-radius: 20px;
@@ -91,9 +91,9 @@ body {
     position: absolute;
     z-index: 6;
     position: absolute;
-    height: 245px;
+    height: 260px;
     width: 80px;
-    background-color: white;
+    background-color:lightgray;
     bottom: 0;
     right: 30px;
     border-top-right-radius: 20px;
@@ -198,4 +198,68 @@ body {
     height: 110px;
     width: 70px;
     border-radius: 30px 0 30px 0 ;
+}
+
+/* dibujo de conejos */
+
+.left-ear--outer {
+    background-color: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;   
+    position: absolute;
+    /* top: -35px; */
+    left: 10px;
+}
+.left-ear--inner {
+    background-color: pink;
+    border-radius: 95%;
+    width: 10px;
+    height: 50px;   
+    position: absolute;
+    top: 8px;
+    left: 15px;
+}
+.right-ear--outer {
+    background-color: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;   
+    position: absolute;
+    /* top: -35px; */
+    right: 10px;
+}
+.right-ear--inner {
+    background-color: pink;
+    border-radius: 95%;
+    width: 10px;
+    height: 50px;   
+    position: absolute;
+    top: 8px;
+    right: 15px;
+}
+.head {
+    background-color: white;
+    border-radius: 50%;
+    height: 80px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+    top: 30px;
+}
+.head__eye {
+    background-color: gray;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 15px;
+}
+.head__eye--left {
+    left: 30px;
+}
+.head__eye--right {
+    right: 30px;
 }
