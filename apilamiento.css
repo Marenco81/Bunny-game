@@ -1,0 +1,201 @@
+:root {
+    --dirt: #b85951;
+    --dirt2: #ca7c75;
+    --dirt3: #a77e7a;
+
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.phone {
+    position: relative;
+    border: 8px solid black;
+    border-radius: 40px;
+    height: 575px;
+    width: 350px;
+    background-color: #ccefff;
+    box-shadow: 0 19px 38px rgb(0, 0, 0, 0.3), 0 15px 12px rgb(0, 0, 0, 0.22);;
+}
+.layer-1 {
+    position: absolute;
+    z-index: 1;
+    height: 500px;
+    width: 80px;
+    background-color: white;
+    bottom: 0;
+    right: 65px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    box-shadow: 0 15px 30px rgb(0, 0, 0, 0.3);
+}
+.layer-2 {
+    position: absolute;
+    z-index: 2;
+    height: 500px;
+    width: 80px;
+    background-color: white;
+    bottom: 0;
+    left: 65px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    box-shadow: 0 15px 30px rgb(0, 0, 0, 0.3);
+
+}
+.layer-3 {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 265px;
+    height: 425px;
+    background-color: var(--dirt);
+    box-shadow: 0 19px 38px rgb(0, 0, 0, 0.3);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.layer-4 {
+    position: absolute;
+    z-index: 4;
+    height: 350px;
+    width: 80px;
+    background-color: white;
+    bottom: 0;
+    left: 100px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    box-shadow: 0 15px 30px rgb(0, 0, 0, 0.3);
+
+}
+.layer-5 {
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    margin: 0 auto;
+    width: 265px;
+    height: 300px;
+    background-color:var(--dirt2);
+    box-shadow: 0 19px 38px rgb(0, 0, 0, 0.3);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 30px;
+
+}
+.layer-6 {
+    position: absolute;
+    z-index: 6;
+    position: absolute;
+    height: 245px;
+    width: 80px;
+    background-color: white;
+    bottom: 0;
+    right: 30px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    
+}
+.layer-7 {
+    position: absolute;
+    z-index: 7;
+    bottom: 0;
+    margin: 0 auto;
+    right: 0;
+    width: 220px;
+    height: 200px;
+    background-color:var(--dirt3);
+    box-shadow: 0 19px 38px rgb(0, 0, 0, 0.3);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 30px;
+}
+.layer-8 {
+    position: absolute;
+    z-index: 8;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0 auto;
+    background-color: rgb(25, 114, 25);
+    height: 150px;
+    width: 150px;
+    box-shadow: 0 19px 38px rgb(0, 0, 0, 0.3);
+    border-radius: 30px 30px 0 0 ;
+
+}
+.layer-9 {
+    position: absolute;
+    z-index: 9;
+    left: 50px;
+    bottom: 0;
+    margin: 0 auto;
+    background-color: rgb(25, 114, 25);
+    height: 110px;
+    width: 100px;
+    box-shadow: 0 19px 38px rgb(0, 0, 0, 0.3);
+    border-radius: 30px 30px 0 0 ;
+
+}
+.layer-10 {
+    position: absolute;
+    z-index: 10;
+    right: 50px;
+    bottom: 0;
+    margin: 0 auto;
+    background-color: rgb(25, 114, 25);
+    height: 110px;
+    width: 100px;
+    box-shadow: 0 19px 38px rgb(0, 0, 0, 0.3);
+    border-radius: 30px 30px 0 0 ;
+
+}
+.layer-11 {
+    position: absolute;
+    z-index: 11;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    background-color: whitesmoke;
+    height: 80px;
+    width: 120px;
+    border-radius: 30px 0 30px 0 ;
+
+}
+.layer-12 {
+    position: absolute;
+    z-index: 12;
+    left: 0;
+    bottom: 0;
+    margin: 0 auto;
+    background-color: whitesmoke;
+    height: 70px;
+    width: 120px;
+    border-radius: 0 30px 0 30px ;
+}
+.layer-13 {
+    position: absolute;
+    z-index: 12;
+    left: 0;
+    bottom: 0;
+    margin: 0 auto;
+    background-color: whitesmoke;
+    height: 110px;
+    width: 70px;
+    border-radius: 0 30px 0 30px ;
+}
+.layer-14 {
+    position: absolute;
+    z-index: 12;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    background-color: whitesmoke;
+    height: 110px;
+    width: 70px;
+    border-radius: 30px 0 30px 0 ;
+}
