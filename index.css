@@ -11,39 +11,97 @@ body {
     width: 100%;
     display: grid;
     place-items: center;
+    background-color: #d1b8b6;
+    overflow: hidden;
+    
+    font-family: sans-serif;
+    color: #b85951;
+}
+
+h2 {
+    text-align: center;
 }
 .phone {
     position: relative;
     border: 8px solid black;
     border-radius: 40px;
-    height: 575px;
+    height: 570px;
     width: 350px;
     background-color: #ccefff;
     box-shadow: 0 19px 38px rgb(0, 0, 0, 0.3), 0 15px 12px rgb(0, 0, 0, 0.22);;
+
+    counter-reset: rabbit;
+}
+input[type="checkbox"]:checked {
+    counter-increment: rabbit;
+}
+.count::after {
+    content: counter(rabbit);
 }
 .layer-1 {
     position: absolute;
     z-index: 1;
     height: 480px;
     width: 80px;
-    background-color: lightgray;
+    background-color: rgba(50, 0, 0, 0.05);
     bottom: 0;
     right: 65px;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     box-shadow: 0 15px 30px rgb(0, 0, 0, 0.3);
+    
+
+    animation-name: hop;
+    animation-duration: 1.25s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+ @keyframes hop {
+    0% {
+        bottom: 0;
+    }
+    25% {
+        bottom: -60px;
+    }
+    100% {
+        bottom: 0;
+    }
+ }
+/* .layer-1 input[type=checkbox]:checked::after {
+    display: none;
+} */
+input[type=checkbox] {
+    appearance: none;
+    cursor: pointer;
+    height: 50px;
+    margin: 0;
+    position: relative;
+    top: 0;
+    width: 80px;
+    z-index: 2;
+}
+input[type=checkbox]:focus {
+    appearance: none;
+    outline: none;
 }
 .layer-2 {
     position: absolute;
     z-index: 2;
     height: 480px;
     width: 80px;
-    background-color:lightgray;
+    background-color: rgba(50, 0, 0, 0.05);
     bottom: 0;
     left: 65px;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     box-shadow: 0 15px 30px rgb(0, 0, 0, 0.3);
+
+    animation-name: hop;
+    animation-duration: 1.25s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-delay: 0.2s;
+
 
 }
 .layer-3 {
@@ -60,17 +118,40 @@ body {
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
 }
+.grass {
+    width: 100%;
+    height: 20px;
+    background-color: green;
+    border-radius: 20px 20px 0 0;
+}
+.zigzag {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(135deg, brown 25%, transparent 25%) -50px 0,
+        linear-gradient(-135deg, brown 25%, transparent 25%) -50px 0,
+        linear-gradient(45deg, brown 25%, transparent 25%),
+        linear-gradient(-45deg, brown 25%, transparent 25%);
+    background-size: 50px 50px;
+}
 .layer-4 {
     position: absolute;
     z-index: 4;
     height: 360px;
     width: 80px;
-    background-color:lightgray;
+    background-color: rgba(211, 211, 211, 0.05);
     bottom: 0;
     left: 100px;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     box-shadow: 0 15px 30px rgb(0, 0, 0, 0.3);
+
+    animation-name: hop;
+    animation-duration: 1.25s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-delay: 0.4s;
 
 }
 .layer-5 {
@@ -93,11 +174,18 @@ body {
     position: absolute;
     height: 260px;
     width: 80px;
-    background-color:lightgray;
+    background-color: rgba(211, 211, 211, 0.05);
     bottom: 0;
     right: 30px;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
+
+
+    animation-name: hop;
+    animation-duration: 1.25s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-delay: 0.6s;
     
 }
 .layer-7 {
@@ -208,14 +296,14 @@ body {
     width: 20px;
     height: 50px;   
     position: absolute;
-    /* top: -35px; */
+    top: 0;
     left: 10px;
 }
 .left-ear--inner {
     background-color: pink;
     border-radius: 95%;
     width: 10px;
-    height: 50px;   
+    height: 40px;   
     position: absolute;
     top: 8px;
     left: 15px;
@@ -224,16 +312,16 @@ body {
     background-color: white;
     border-radius: 90%;
     width: 20px;
-    height: 50px;   
+    height: 60px;   
     position: absolute;
-    /* top: -35px; */
+    top: 0;
     right: 10px;
 }
 .right-ear--inner {
     background-color: pink;
     border-radius: 95%;
     width: 10px;
-    height: 50px;   
+    height: 40px;   
     position: absolute;
     top: 8px;
     right: 15px;
@@ -256,6 +344,25 @@ body {
     height: 5px;
     position: absolute;
     top: 15px;
+
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+    0% {
+        height: 5px;
+    }
+    5% {
+        height: 1px;
+        transform: translate(0px, 2px);
+    }
+    10% {
+        height: 5px;
+        transform: translate(0px, 0px);
+
+    }
 }
 .head__eye--left {
     left: 30px;
